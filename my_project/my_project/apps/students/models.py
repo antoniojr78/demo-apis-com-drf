@@ -12,7 +12,7 @@ class Student(models.Model):
     active = models.BooleanField(default=True)
 
     class Meta:
-        db_table = "student"
+        db_table = "students"
 
     def __str__(self):
         return str(self.id) + ' - ' + self.name
