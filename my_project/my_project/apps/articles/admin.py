@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Actor
+from .models import Author
 
 
-admin.site.register(Actor)
+admin.site.register(Author)
 
