@@ -8,7 +8,21 @@ class Author(models.Model):
     email = models.EmailField()
 
     class Meta:
-        db_table = 'author'
+        db_table = 'authors'
 
     def __str__(self):
         return self.name + ' - ' + self.email
+
+
+class Article(models.Model):
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    insert_date = models.DateField(auto_now=True)
+    update_date = models.DateField(auto_now_add=True)
+    text = models.TextField()
+
+    class Meta:
+        db_table = 'articles'
+
+    def __str__(self):
+        return self.title
