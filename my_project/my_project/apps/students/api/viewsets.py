@@ -4,5 +4,5 @@ from ..models import Student
 
 
 class StudentsModelViewSet(viewsets.ModelViewSet):
-    queryset = Student.objects.all().filter(active=True)
+    queryset = Student.objects.all()  # .filter(active=True)
     serializer_class = StudentSerializer
