@@ -22,4 +22,5 @@ urlpatterns = [
     # path('api-auth/', include('rest_framework.urls')),
     path('api/', include('my_project.apps.students.api.urls')),
     path('api/', include('my_project.apps.students.api_test.urls')),
+    path('api/', include('my_project.apps.articles.api.urls')),
 ]
