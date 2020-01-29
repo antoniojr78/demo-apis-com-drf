@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Obs.: If you are using Django less than 3 use: "% load staticfiles %" -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <h3 class="text-info">Consuming APIs with JQuery and Bootstrap</h3>
+    <ul class="list-group" id="ul_authors">
+
+    </ul>
+
+    <footer>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script>
+            $.ajax({
+                url: 'http://localhost:8000/api/authors/',
+                dataType: 'json',
+                success: function(authors) {
+                    console.log(authors)
+                    $.each(authors, function(){
+                        $('#ul_authors').append("<li class='list-group-item'>" + this.name + "</li>")
+                        $('#ul_authors').append("<li class='list-group-item'>" + this.address + "</li>")
+                        $('#ul_authors').append("<li class='list-group-item'>" + (this.site == null || this.site.trim() == '' ? "Not informed" : this.site) + "</li>")
+                        $('#ul_authors').append("<li class='list-group-item'>" + this.email + "</li>")
+                        $('#ul_authors').append('<br />')
+                    })
+                }
+            })
+        </script>
+    </footer>
+</body>
+</html>
