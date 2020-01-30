@@ -42,10 +42,12 @@ INSTALLED_APPS = [
     'my_project.apps.students',
     'my_project.apps.articles',
     'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -81,6 +83,10 @@ REST_FRAMEWORK = {
 }
 
 WSGI_APPLICATION = 'my_project.wsgi.application'
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+]
 
 
 # Database
