@@ -85,8 +85,9 @@ REST_FRAMEWORK = {
 WSGI_APPLICATION = 'my_project.wsgi.application'
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000",  # Client port in ReactJs
-    "http://localhost:8080"  # Client port in VueJs
+    "http://localhost:3000",  # Client port written in ReactJs
+    "http://localhost:8080",  # Client port written in VueJs
+    "http://localhost:4200"  # Client port written in Angular
 ]
 
 
