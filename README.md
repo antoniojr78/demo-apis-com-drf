@@ -1,5 +1,6 @@
 # Contruindo APIs com Django Rest Framework / Building APIs with Django Rest Framework
-Demonstração de API back-end em Django Rest Framework para ser consumida por front-ends:  
+Demonstração de API back-end em Django Rest Framework para ser consumida por front-ends: /  
+Demo of back-end API in Django Rest Framework to be consumed by front ends:  
 
 * [React + Bootstrap + Axios](https://github.com/antoniojr78/demo-apis-com-drf-react-ui)  
 * [Vue + Bootstrap + Axios](https://github.com/antoniojr78/demo-apis-com-drf-vue-ui)  
